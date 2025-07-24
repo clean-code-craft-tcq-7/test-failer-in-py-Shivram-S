@@ -21,11 +21,14 @@ def alert_in_celcius(farenheit):
         # Add a test below to catch this bug. Alter the stub above, if needed.
         global alert_failure_count
         alert_failure_count += 1
+    return celcius
 
 
-alert_in_celcius(400.5)
+assert(int(alert_in_celcius(400.5))==int(204.72))
 assert(alert_failure_count == 1)
-alert_in_celcius(303.6)
+assert(int(alert_in_celcius(303.6))==int(150.8))
+assert(alert_failure_count == 1)
+assert((alert_in_celcius(32))==0)
 assert(alert_failure_count == 1)
 print(f'{alert_failure_count} alerts failed.')
 print('All is well')
